@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/* 
+	Author: ALISSA HARDISON
+	Date: 12 FEB 2022
+	
+	Filename: ma_base_styles.css
+	This file contains the basic styles for Murphy's Auto:
+	>> RESET: styles for all devices under all conditions
+	>> BASE: html, body, header, nav, section, article, & footer
+	>> FLEX: body, header, footer, & section
+	>> MOBILE: header, nav, & footer
+	>> TABLET: article & nav
+	>> TABLET & DESKTOP: nav
+	>> DESKTOP: article, nav & ul
+*/
+/* ===========================================================================
+								>> RESET
+   ===========================================================================
+*/
+article, aside, figcaption, figure,
+footer, header, nav, section { 
+   display: block;
+}
+
+address, article, body, footer, h1, h2, h3, h4,
+header, html, img, li, nav, nav a, ul, p, section {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+ul {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+/* ===========================================================================
+									>> BASE
+   ===========================================================================
+*/
+/* ---------------------------- HTML/BODY ----------------------------------*/
+html {
+	background: rgb(255,255,255);
+	height: 100%;
+	font-family: Calibri, sans-serif;
+	font-size: 12px;
+}
+
+body {
+	min-height: 100%;
+	min-width: 320px;
+	width: 100%;
+	line-height: 1;
+	margin: 0px auto;
+}
+/* ------------------------------- HEADER ----------------------------------*/
+body > header {
+	background: rgb(149, 193, 240);   
+}
+
+body > header > img {
+	display: block;
+	width: 20%;
+}
+
+body > header > p {
+	font-size: 2em;
+	font-style: italic;
+	text-align: right;
+	line-height: 1.2em;
+	padding-top: 1em;
+	padding-right: 1em;
+	float: right;
+}
+/*----------------------------------- NAV -----------------------------------*/
+nav.horizontal {
+	width: 100%;
+	background-color: rgb(35, 56, 150);
+	clear: both;
+	line-height: 4em;
+}
+
+nav.horizontal ul li a {
+   display: block;
+   padding-left: 0.5em;
+   text-align: center;
+   font-size: 2em;
+}
+
+nav.horizontal ul li a:visited, nav.horizontal ul li a:link {
+   color: rgb(231, 231, 231);
+}
+
+nav.horizontal ul li a:hover, nav.horizontal ul li a:active {
+   background-color: rgb(20, 33, 92);
+   color: rgb(231, 231, 231);
+}
+
+a#navicon {
+	display: none;
+}
+/*-------------------------- SECTION/ARTICLE ---------------------------------*/
+section::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+body > section {
+	width: 100%;
+	background: rgb(231, 231, 231);
+}
+
+section#main > article {
+	width: 100%;
+	text-align: center;	
+}
+
+section#main > article#slogan > h1 {
+		font-size: 5em;
+	}
+
+section#main > article#slogan > h3 {
+	   font-size: 2em;
+	   font-style: italic;
+	}
+/*------------------------------- FOOTER -------------------------------------*/
+body > footer {
+   background-color: rgb(35, 56, 150);
+   padding: 10px;
+   color: white;
+   font-weight: bold;
+   width: 100%;
+   display: flex;
+   text-align: left;
+}
+
+body > footer { 
+	display: table;
+	clear: both;
+	content: "";
+}
+
+footer > section#footInfo {
+	width: 31%;
+	float: left;
+	letter-spacing: 0.1em;
+}
+
+nav.footNav {
+	margin: 0.3em 1em 0em 1.5em;
+	font-size: 1.2em;
+}
+
+nav.footNav ul {
+	float: right;
+	font-size: 0.8em;
+	text-align: center;
+	width: 31%;
+	list-style-type: none;
+}
+
+nav.footNav a {
+	text-decoration: none;
+	color: white;
+}
+
+nav.footnav a:hover, nav.footnav a:active {
+   text-decoration: underline;
+}
+/* ===========================================================================
+								>> FLEX
+   ===========================================================================
+*/
+body {
+	display: -webkit-flex;
+	display: flex;
+	webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	}
+
+header, footer {
+	   width: 100%;
+	}
+
+section#main {
+	-webkit-flex: 3 1 361px;
+	flex: 3 1 361px;
+	}
+/* ===========================================================================
+							>> MOBILE: 0 to 480px 
+   ===========================================================================
+*/ @media only screen and (max-width: 480px) {
+/* ------------------------------- HEADER ----------------------------------*/
+	body > header > img {
+		float: left;
+		width: 50%;
+	}
+
+	header > p#call {
+		display: none;
+	}
+/*----------------------------- NAV/NAV ICON --------------------------------*/
+	nav > a > img {
+		width: 30%;
+		float: right;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+	nav.horizontal {
+		background-color: rgb(35, 56, 150);
+	}
+	
+	nav.horizontal ul {
+	  display: none;
+	}
+
+	nav.horizontal a {
+		 font-size: 2em;
+		 line-height: 2em;
+	 }
+	 
+	nav.horizontal ul li a {
+	  text-align: right;
+	  padding: 0.5em;
+	}
+
+	a#navicon {
+	  display: block;
+	}
+
+	a#navicon:hover+ul, nav.horizontal ul:hover {
+	  display: block;
+	}	
+/*-------------------------------- FOOTER -----------------------------------*/
+	section {
+		width: 100%;
+		padding: 10px;
+	}
+	
+	section > nav {
+		width: 50%;
+	}
+	
+	nav#links {
+		float: right;
+		text-align: right;
+	}
+	
+	nav#hours {
+		display: none;
+	}
+	
+	footer {
+		-webkit-order: 100;
+		order: 100;
+	}
+}
+/* ===========================================================================
+						>> TABLET: 481px to 768px 
+   ===========================================================================
+*/ @media only screen and (min-width: 481px) {
+/*-------------------------------- ARTICLE -----------------------------------*/
+	section#main > h1 {
+		color: rgb(207, 222, 172);
+		font-size: 2.5em;
+		letter-spacing: 0.2em;
+		margin-bottom: 40px;
+		text-shadow: black 2px 2px 4px;
+	}
+/*----------------------------------- NAV ------------------------------------*/
+	nav.horizontal li {
+		font-size: 1.2em;
+	}
+	
+	nav.horizontal ul {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+	}
+
+	nav.horizontal li {
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+	
+	a#navicon {
+		display: none;
+	}
+	
+	body > section#main > article img {
+		box-shadow: 3px 3px 10px rgb(151, 151, 151);
+		display: block;
+		float: right;
+		margin: 0px 20px 20px 20px;
+		width: 60%;
+	}
+}
+/* ===========================================================================
+					>> TABLET AND DESKTOP: 481px and greater
+   ===========================================================================
+*/@media only screen and (min-width: 481px) {
+/* ------------------------------- NAV -------------------------------------*/
+	nav.horizontal ul {
+		display: -webkit-flex;
+		display: flex;
+		webkit-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+	}
+
+	nav.horizontal li {
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+}
+/* ===========================================================================
+						>> DESKTOP: 769px and greater
+   ===========================================================================
+*/ @media only screen and (min-width: 481px) {
+/* ------------------------------- NAV -------------------------------------*/
+	ul {
+		background: transparent;
+		box-shadow: none;
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+	
+	nav.horizontal::after {
+		clear: both;
+		content: "";
+		display: table;
+	}	
+/* ----------------------------- ARTICLE -----------------------------------*/	
+	article {
+		float: left;
+		margin-right: 5%;
+		width: 55%;
+	}
+}
+
+/* ===========================================================================
+								>> 
+   ===========================================================================
+*/
