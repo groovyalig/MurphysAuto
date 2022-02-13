@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/*
+	Author: ALISSA HARDISON
+	Date: 9 FEB 2022
+	
+   Filename: ma_styles_home.css
+   
+   This file contains the screen styles used with Murphy's Auto Home Page
+
+*/
+/* ==============================================================================
+									Base Styles 
+   ==============================================================================
+*/
+	section img {
+	   display: block;
+	   width: 50%;
+	   margin: auto;
+	   padding: 10px;
+	}
+	
+	section#main > h4 {
+		font-size: 1.6em;
+		text-align: center;
+	}
+	
+	section#about {
+		font-size: 1.5em;
+		text-align: center;
+		line-height: 1.3em;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px;
+	}
+
+/* ==============================================================================
+							Mobile Devices: 0 to 480px 
+   ==============================================================================
+*/
+@media only screen and (max-width: 480px) {
+	section img {
+	   display: block;
+	   width: 80%;
+	   margin: auto;
+	   padding: 10px;
+	}
+	
+	section#about {
+		font-size: 1.2em;
+		text-align: center;
+		line-height: 1.3em;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+}
+
+/* ================================================================================
+						Tablet Devices: 481px to 768px 
+   ================================================================================
+*/
+@media only screen and (min-width: 481px) {
+
+}
+
+/* ==================================================================================
+   Desktop Devices: 769px and wider
+   ==================================================================================
+*/
+@media only screen and (min-width: 769px) {
+
+}

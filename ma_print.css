@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+   Author:   ALISSA HARDISON
+   Date:     10 JULY 2019
+   
+   Filename:  ma_print.css
+
+   This file contains the printer styles used with Murphy's Auto
+
+*/
+
+/* Header Styles */
+
+body > header {
+   text-align: right;
+}
+
+body > header > img {
+   display: block;
+   width: 100%;
+}
