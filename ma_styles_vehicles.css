@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/*
+	Author: ALISSA HARDISON
+	Date: 23 FEB 2022
+	
+   Filename: ma_styles_vehicles.css
+   
+   This file contains the screen styles used with Murphy's Auto Sedans/Trucks Pages
+   >> BASE: section, div, img
+   >> FLEX: div, img
+
+*/
+/* ==============================================================================
+								>> BASE
+   ==============================================================================
+*/
+section#vehicles {
+	width: 100%;
+}
+
+section > div {
+	width: 60%;
+	margin: 2em auto;
+	padding: 2em;
+	border-style: solid;
+}
+
+section > div > img {
+	width: 30%;
+}
+
+div.infoleft {
+	width: 30%;
+	font-size: 2em;
+	line-height: 2em;
+	float: right;
+	text-align: left;
+}
+
+div.inforight {
+	width: 30%;
+	font-size: 2em;
+	line-height: 1.7em;
+	float: right;
+	text-align: left;
+}
+
+/* ==============================================================================
+									>> FLEX 
+   ==============================================================================
+*/
+div {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/* ==============================================================================
+							Mobile Devices: 0 to 480px 
+   ==============================================================================
+*/
+@media only screen and (max-width: 480px) {
+	section > div {
+		width: 85%;
+	}
+	
+	section > div > img {
+		width: 100%;
+		float: center;
+	}
+	
+	div.infoleft {
+		float: left;
+		font-size: 1em;
+		line-height: 1em;
+		width: 35%;
+		margin: 5px auto;
+	}
+	
+	div.inforight {
+		float: right;
+		font-size: 1em;
+		line-height: 1em;
+		width: 45%;
+		margin: 5px auto;
+	}
+}
+
+/* ================================================================================
+						Tablet Devices: 481px to 768px 
+   ================================================================================
+*/
+@media only screen and (min-width: 481px) {
+section > div {
+	width: 80%;
+}
+
+section > div > img {
+	width: 25%;
+}
+
+div.infoleft {
+	width: 30%;
+	font-size: 1.3em;
+	line-height: 1em;
+	float: right;
+	text-align: left;
+}
+
+div.inforight {
+	width: 30%;
+	font-size: 1.3em;
+	line-height: 1em;
+	float: right;
+	text-align: left;
+}
+}
+
+/* ==================================================================================
+   Desktop Devices: 769px and wider
+   ==================================================================================
+*/
+@media only screen and (min-width: 769px) {
+section > div {
+	width: 60%;
+}
+
+section > div > img {
+	width: 30%;
+}
+
+div.infoleft {
+	width: 30%;
+	font-size: 2em;
+	line-height: 2em;
+	float: right;
+	text-align: left;
+}
+
+div.inforight {
+	width: 30%;
+	font-size: 2em;
+	line-height: 1.7em;
+	float: right;
+	text-align: left;
+}
+}
